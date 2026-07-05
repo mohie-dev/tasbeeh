@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>السبحة الإلكترونية - Electronic Tasbeeh</title>
+    <meta name="description" content="سبحة إلكترونية حديثة مع خاصية حفظ التقدم - Electronic Tasbeeh with progress saving">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+    </button>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="glass-card hero-section fade-in">
+            <h1 class="hero-title">السبحة الإلكترونية</h1>
+            <p class="hero-subtitle">May Allah accept every remembrance and make its reward reach the soul of the deceased.</p>
+            <div class="dua-container">
+                <p class="dua-text">اللهم اغفر لوالدة عبدالحميد مسعد وعافها واعف عنها، واجعل هذا العمل سببًا في استمرار الأجر لها، وتقبل من كل من يذكرك.</p>
+            </div>
+            <a href="#tasbeeh-section" class="btn btn-primary start-btn">ابدأ التسبيح - Start Tasbeeh</a>
+        </header>
+
+        <!-- Main Tasbeeh Section (Focus Area) -->
+        <main id="tasbeeh-section" class="tasbeeh-container fade-in delay-1">
+            
+            <div class="tasbeeh-core glass-card glow-effect">
+                <div class="progress-ring-container">
+                    <svg class="progress-ring" width="300" height="300">
+                        <circle class="progress-ring__circle-bg" stroke="var(--ring-bg-color)" stroke-width="12" fill="transparent" r="140" cx="150" cy="150"/>
+                        <circle id="progress-ring-circle" class="progress-ring__circle" stroke="var(--primary-color)" stroke-width="12" fill="transparent" r="140" cx="150" cy="150"/>
+                    </svg>
+                    
+                    <button id="tap-btn" class="tap-button">
+                        <div class="counter-wrapper">
+                            <div class="counter-display" id="counter">0</div>
+                        </div>
+                        <div class="current-dhikr-display" id="current-dhikr-display">سبحان الله</div>
+                        <div class="tap-hint">اضغط للتسبيح</div>
+                    </button>
+                </div>
+                
+                <div class="controls-row">
+                    <button id="reset-btn" class="btn btn-secondary btn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                        تصفير
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dhikr Selector -->
+            <section class="selection-section glass-card fade-in delay-2">
+                <h3 class="section-title">اختر الذكر</h3>
+                <div class="chips-container vertical-chips" id="dhikr-selector">
+                    <button class="chip active" data-dhikr="سبحان الله">سبحان الله</button>
+                    <button class="chip" data-dhikr="الحمد لله">الحمد لله</button>
+                    <button class="chip" data-dhikr="الله أكبر">الله أكبر</button>
+                    <button class="chip" data-dhikr="لا إله إلا الله">لا إله إلا الله</button>
+                    <button class="chip" data-dhikr="لا حول ولا قوة إلا بالله">لا حول ولا قوة إلا بالله</button>
+                    <button class="chip" data-dhikr="سبحان الله وبحمده">سبحان الله وبحمده</button>
+                    <button class="chip" data-dhikr="سبحان الله العظيم">سبحان الله العظيم</button>
+                    <button class="chip" data-dhikr="اللهم صل وسلم على نبينا محمد">اللهم صل وسلم على نبينا محمد</button>
+                </div>
+            </section>
+
+
+
+            <!-- Share Section -->
+            <section class="share-section glass-card fade-in delay-5">
+                <div class="share-content">
+                    <h3 class="section-title">شارك الأجر</h3>
+                    <p class="share-text">Help others remember Allah and share the reward.</p>
+                </div>
+                <button id="share-btn" class="btn btn-primary btn-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                    مشاركة - Share
+                </button>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer fade-in delay-5">
+            <p class="footer-dua">نسأل الله أن يتقبل هذا العمل وأن يجعله سببًا في استمرار الأجر.</p>
+            <p class="made-with-love">Made with ❤️ for Sadaqah Jariyah</p>
+        </footer>
+    </div>
+
+
+    <!-- Confirm Reset Modal -->
+    <div id="confirm-modal" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <h2 class="modal-title">تصفير العداد؟</h2>
+            <p class="modal-desc">هل أنت متأكد أنك تريد تصفير عداد الجلسة الحالية؟</p>
+            <div class="modal-actions">
+                <button id="cancel-reset-btn" class="btn btn-secondary">إلغاء</button>
+                <button id="confirm-reset-btn" class="btn btn-danger">تصفير</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification (for copy to clipboard fallback) -->
+    <div id="toast" class="toast">تم نسخ الرابط! Link copied!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
